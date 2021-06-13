@@ -1,0 +1,55 @@
+$(function() {
+	$(".draggable").draggable();
+});
+
+$(window).load(function(){
+		function randomFromTo(from, to){
+			return Math.floor(Math.random() * (to - from + 1) + from);
+		}
+  
+		function moveRandom(id) {
+			/* get container position and size
+			 * -- access method : cPos.top and cPos.left */
+			var cPos = $('#container').offset();
+			var cHeight = $('#container').height();
+			var cWidth = $('#container').width();
+			
+			// get box padding (assume all padding have same value)
+			var pad = parseInt($('#container').css('padding-top').replace('px', ''));
+			
+			// get movable box size
+			var bHeight = $(id).height();
+			var bWidth = $(id).width();
+			
+			// set maximum position
+			maxY = cPos.top + cHeight - bHeight - pad;
+			maxX = cPos.left + cWidth - bWidth - pad;
+			
+			// set minimum position
+			minY = cPos.top + pad;
+			minX = cPos.left + pad;
+			
+			// set new position			
+			newY = randomFromTo(minY, maxY);
+			newX = randomFromTo(minX, maxX);
+			
+			$(id).animate({
+				top: newY,
+				left: newX
+				}, 500, function() {
+			});
+		}
+
+moveRandom('#piece1');
+moveRandom('#piece2');
+moveRandom('#piece3');
+moveRandom('#piece4');
+moveRandom('#piece5');
+moveRandom('#piece6');
+moveRandom('#piece7');
+moveRandom('#piece8');
+moveRandom('#piece9');
+moveRandom('#piece10');
+moveRandom('#piece11');
+
+});
