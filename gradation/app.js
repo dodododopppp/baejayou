@@ -1,7 +1,6 @@
 import {GlowParticle} from './glowparticle.js';
 const COLORS=[
     {r: 45, g: 74, b: 227},
-    {r: 250, g: 255, b: 89},
     {r: 255, g: 104, b: 248},
     {r: 44, g: 209, b: 252},
     {r: 54, g: 233, b: 84}
