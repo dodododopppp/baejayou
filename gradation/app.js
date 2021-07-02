@@ -17,8 +17,8 @@ class App{
 
         this.totalparticles = 30;
         this.particles = [];
-        this.maxRadius = 40;
-        this.minRadius = 10;
+        this.maxRadius = 50;
+        this.minRadius = 30;
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
