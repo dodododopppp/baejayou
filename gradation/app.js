@@ -16,20 +16,20 @@ class App{
 
         this.pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
 
-        this.totalparticles = 10;
+        this.totalparticles = 20;
         this.particles = [];
-        this.maxRadius = 40;
+        this.maxRadius = 60;
         this.minRadius = 20;
-        
+
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
 
         window.requestAnimationFrame(this.animate.bind(this));
     }
     resize(){
-        
-        this.stageWidth = 100//document.body.clientWidth * this.pixelRatio;
-        this.stageHeight = 100//document.body.clientHeight * this.pixelRatio;
+
+        this.stageWidth = 130 //document.body.clientWidth * this.pixelRatio;
+        this.stageHeight = 130 //document.body.clientHeight * this.pixelRatio;
 
         //this.canvas.width = this.stageWidth * this.pixelRatio;
         //this.canvas.height = this.stageHeight * this.pixelRatio;
@@ -43,7 +43,7 @@ class App{
         let curColor = 0;
         this.particles = [];   
         for (let i = 0; i < this.totalparticles; i++){
-            
+
             const item = new GlowParticle(
                 Math.random() * this.stageWidth,
                 Math.random() * this.stageHeight,
@@ -51,7 +51,7 @@ class App{
                 (this.maxRadius - this.minRadius) + this.minRadius,
                 COLORS[curColor]
             );
-            
+
             if (++curColor >= COLORS.length){
                 curColor = 0;
             }
@@ -70,4 +70,4 @@ class App{
 }
 window.onload = () => {
     new App();
-}
+} 
