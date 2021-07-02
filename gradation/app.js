@@ -18,7 +18,7 @@ class App{
 
         this.totalparticles = 20;
         this.particles = [];
-        this.maxRadius = 70;
+        this.maxRadius = 40;
         this.minRadius = 40;
         
         window.addEventListener('resize', this.resize.bind(this), false);
@@ -28,8 +28,8 @@ class App{
     }
     resize(){
         
-        this.stageWidth = 130 //document.body.clientWidth * this.pixelRatio;
-        this.stageHeight = 130 //document.body.clientHeight * this.pixelRatio;
+        this.stageWidth = 100 //document.body.clientWidth * this.pixelRatio;
+        this.stageHeight = 100 //document.body.clientHeight * this.pixelRatio;
 
         //this.canvas.width = this.stageWidth * this.pixelRatio;
         //this.canvas.height = this.stageHeight * this.pixelRatio;
