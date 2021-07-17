@@ -15,10 +15,10 @@ class App{
 
         this.pixelRatio = (window.devicePixelRatio > 1) ? 2 : 1;
 
-        this.totalparticles = 15;
+        this.totalparticles = 30;
         this.particles = [];
         this.maxRadius = 80;
-        this.minRadius = 50;
+        this.minRadius = 40;
 
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
