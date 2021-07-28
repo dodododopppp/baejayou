@@ -33,7 +33,7 @@ function calResult(){
 }
 
 function setResult(){
-  let point = 0;//calResult();
+  let point = calResult();
   const resultName = document.querySelector('.resultname');
   resultName.innerHTML = infoList[point].name;
 
