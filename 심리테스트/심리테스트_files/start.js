@@ -95,7 +95,8 @@ function addAnswer(answerText, qIdx, idx){
   }, false);
 }
 
-function goNext(qIdx){
+function goNext(qIdx);){
+  alert(qIdx);
   if(qIdx == endPoint){
     goResult();
     return;
