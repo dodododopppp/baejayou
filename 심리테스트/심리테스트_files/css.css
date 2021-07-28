@@ -8,7 +8,8 @@
 *{ font-family: 'NanumSquareRound'!important; font-weight:600; }
 
 #main{
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   background-color: white;
   width: 80%; 
   text-align: center;
