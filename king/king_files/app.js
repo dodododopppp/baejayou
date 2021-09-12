@@ -19,7 +19,7 @@ function change(){
     document.getElementById('ima').src = "./king_files/img/rt.gif";
     document.getElementById('que').innerHTML = "감사합니다.";
   }else{
-    document.getElementById('box').style.padding="50px";
+    document.getElementById('box').style.padding="100px";
     if(flag){
       imainfo(); queinfo();
       flag=0;
@@ -39,5 +39,5 @@ $(window).load( function() {
     arr[j] = tmp;
   }
   document.getElementById('ima').src = "./king_files/img/"+arr[point]+".png";
-  document.getElementById('que').innerHTML = q[arr[point]]+"?<br><p style=\"font-weight:400;font-size:15px;background-color:white;line-height:0\">(사진을 누르면 다음으로 이동합니다.)<p>";
+  document.getElementById('que').innerHTML = q[arr[point]]+"?<br><p style=\"font-weight:400;font-size:30px;background-color:white;line-height:0\">(사진을 누르면 다음으로 이동합니다.)<p>";
 })
