@@ -4,19 +4,6 @@
 <html>
     <head>
         <script src="./king_files/app.js"></script>
-        <script>
-            $(window).load( function() { 
-                for(var x=0;x<arr.length;x++){
-                   var i = parseInt(Math.random()*(arr.length-1));
-                   var j = parseInt(Math.random()*(arr.length-1));
-                    var tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                }
-                document.getElementById('ima').src = "./king_files/img/"+arr[point]+".png";
-                document.getElementById('que').innerHTML = q[arr[point]]+"?<br><p style=\"font-weight:400;font-size:30px;background-color:white;line-height:0\">(사진을 누르면 다음으로 이동합니다.)<p>";
-            });
-        </script>
         <link rel="stylesheet" href="./king_files/style.css">
     </head>
     <body>
